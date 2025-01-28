@@ -1,8 +1,9 @@
 {
   "name": "tarefa_grupo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
     "test": "jest"
   },
   "keywords": [],
