@@ -1,6 +1,6 @@
 
 
-export interface ICurso<T> {
+export interface ICurso {
     idCurso: number;
     nome: string;
     descricao: string;
