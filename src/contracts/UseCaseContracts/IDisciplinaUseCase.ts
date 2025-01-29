@@ -1,6 +1,6 @@
-import { IUseCase } from "./IUseCase";
+import { IUseCase } from "../../contracts/useCaseContracts/IUseCase"
 
-import { IDisciplina } from "contracts/EntityContracts/IDisciplina";
+import { IDisciplina } from "../../contracts/entityContracts/IDisciplina";
 
 export interface ICreateDisciplinaUseCase extends IUseCase<IDisciplina, IDisciplina> {}
 export interface IGetDisciplinaUseCase extends IUseCase<number, IDisciplina | undefined> {}

@@ -1,4 +1,4 @@
-import { IDisciplina } from "contracts/EntityContracts/IDisciplina";
+import { IDisciplina } from "../../contracts/entityContracts/IDisciplina";
 
 export class Disciplina implements IDisciplina {
     idDisciplina: number;

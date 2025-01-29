@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { ISemestreController } from "contracts/ControllerContracts/ISemestreController";
-import { IUseCase } from "contracts/UseCaseContracts/IUseCase";
-import { ISemestre } from "contracts/EntityContracts/ISemestre";
+import { ISemestreController } from "../../src/contracts/controllerContracts/ISemestreController";
+import { IUseCase } from "../../src/contracts/useCaseContracts/IUseCase";
+import { ISemestre } from "../../src/contracts/entityContracts/ISemestre";
 
 export class semestreController implements ISemestreController{
 

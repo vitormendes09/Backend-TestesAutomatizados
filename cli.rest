@@ -1,0 +1,46 @@
+# Teste para a rota GET /
+GET http://localhost:3000/
+
+###
+
+# Teste para a rota POST /api/cursos/curso
+POST http://localhost:3000/api/cursos/curso
+Content-Type: application/json
+
+{
+  "idCurso": 1,
+  "nome": "Curso de Teste ",
+  "descricao": "Descrição do curso de teste ",
+  "duracao": 8,
+  "nivel": "Bacharelado",
+  "coordenador": "Coordenador Teste "
+}
+
+###
+
+# Teste para a rota PUT /api/cursos/curso/:id
+PUT http://localhost:3000/api/cursos/curso/1
+Content-Type: application/json
+
+{
+  "nome": "Curso de Teste Atualizado",
+  "descricao": "Descrição atualizada do curso de teste",
+  "duracao": 5,
+  "nivel": "Bacharelado",
+  "coordenador": "Coordenador Teste Atualizado"
+}
+
+###
+
+# Teste para a rota DELETE /api/cursos/curso/:id
+DELETE http://localhost:3000/api/cursos/curso/1
+
+###
+
+# Teste para a rota GET /api/cursos/curso/:id
+GET http://localhost:3000/api/cursos/curso/1
+
+###
+
+# Teste para a rota GET /api/cursos/cursos
+GET http://localhost:3000/api/cursos/cursos

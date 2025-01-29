@@ -1,5 +1,5 @@
-import { IGetCursoUseCase } from "contracts/UseCaseContracts/ICursoUseCase";
-import { ICurso } from "contracts/EntityContracts/ICurso"
+import { IGetCursoUseCase } from "../../../contracts/useCaseContracts/ICursoUseCase";
+import { ICurso } from "../../../contracts/entityContracts/ICurso"
 
 export class GetCursoUseCase implements IGetCursoUseCase{
 

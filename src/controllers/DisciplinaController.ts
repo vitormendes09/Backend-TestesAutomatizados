@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { IDisciplinaController } from "contracts/ControllerContracts/IDisciplinaController";
-import { IUseCase } from "contracts/UseCaseContracts/IUseCase";
-import { IDisciplina } from "contracts/EntityContracts/IDisciplina";
+import { IDisciplinaController } from "../../src/contracts/controllerContracts/IDisciplinaController";
+import { IUseCase } from "../../src/contracts/useCaseContracts/IUseCase";
+import { IDisciplina } from "../../src/contracts/entityContracts/IDisciplina";
 
 export class DisciplinaController implements IDisciplinaController {
     private useCase: IUseCase<any, any>;

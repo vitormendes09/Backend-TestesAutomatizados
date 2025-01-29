@@ -1,4 +1,4 @@
-import {ISemestre} from "../../contracts/EntityContracts/ISemestre";
+import {ISemestre} from "../../contracts/entityContracts/ISemestre";
 
 export class Semestre implements ISemestre{
     idSemestre: number;
