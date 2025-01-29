@@ -1,34 +1,13 @@
-import { Disciplina } from "./disciplina";
+import {ISemestre} from "../../contracts/ISemestre";
 
-export class Semestre {
-  private id: string;
-  private numero: number;
-  private disciplinas: Disciplina[];
+export class Semestre implements ISemestre{
+    idSemestre: number;
+    numero: number;
+    
 
-  constructor(id: string, numero: number, disciplinas: Disciplina[] = []) {
-    this.id = id;
-    this.numero = numero;
-    this.disciplinas = disciplinas;
-  }
+    constructor(id: number, numero: number, ) {
+        this.idSemestre = id;
+        this.numero = numero;
+    }
 
-  
-  public getId(): string {
-    return this.id;
-  }
-
-  public getNumero(): number {
-    return this.numero;
-  }
-
-  public setNumero(numero: number): void {
-    this.numero = numero;
-  }
-
-  public getDisciplinas(): Disciplina[] {
-    return this.disciplinas;
-  }
-
-  public addDisciplina(disciplina: Disciplina): void {
-    this.disciplinas.push(disciplina);
-  }
 }
