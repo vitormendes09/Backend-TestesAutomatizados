@@ -1,6 +1,6 @@
 import { ICurso } from "contracts/entityContracts/ICurso";
 
-export class Curso implements ICurso<Curso> {
+export class Curso implements ICurso {
     idCurso: number;
     nome: string;
     descricao: string;
