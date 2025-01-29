@@ -1,5 +1,5 @@
 import { IUseCase } from "./IUseCase";
-import { ISemestre } from "contracts/entityContracts/ISemestre";
+import { ISemestre } from "contracts/EntityContracts/ISemestre";
 
 export interface ICreateSemestreUseCase extends IUseCase<ISemestre, ISemestre> {}
 export interface IGetSemestreUseCase extends IUseCase<number, ISemestre | undefined> {}

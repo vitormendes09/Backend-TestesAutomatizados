@@ -1,5 +1,5 @@
 import { IUseCase } from "./IUseCase";
-import { ICurso } from "contracts/entityContracts/ICurso";
+import { ICurso } from "contracts/EntityContracts/ICurso";
 
 export interface ICreateCursoUseCase extends IUseCase<ICurso, ICurso> {}
 export interface IGetCursoUseCase extends IUseCase<number, ICurso | undefined> {}

@@ -1,6 +1,6 @@
 import { IDeleteCursoUseCase } from "contracts/UseCaseContracts/ICursoUseCase";
 import {
-     ICurso } from "contracts/entityContracts/ICurso"
+     ICurso } from "contracts/EntityContracts/ICurso"
 export class DeleteCursoUseCase implements IDeleteCursoUseCase {
   private cursos: ICurso[];
 

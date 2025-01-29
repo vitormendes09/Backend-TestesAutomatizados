@@ -1,5 +1,5 @@
 import { ICreateCursoUseCase } from "contracts/UseCaseContracts/ICursoUseCase";
-import { ICurso } from "contracts/entityContracts/ICurso";
+import { ICurso } from "contracts/EntityContracts/ICurso";
 
 export class CreateCursoUseCase implements ICreateCursoUseCase{
 
