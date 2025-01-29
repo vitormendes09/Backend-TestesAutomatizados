@@ -2,14 +2,31 @@ import { Request, Response } from "express";
 import { ICursoController } from "contracts/ControllerContracts/ICursoController";
 import { IUseCase } from "contracts/UseCaseContracts/IUseCase";
 import { ICurso } from "contracts/EntityContracts/ICurso";
+import { ICreateCursoUseCase, IDeleteCursoUseCase, IGetCursoUseCase, IUpdateCursoUseCase } from "contracts/UseCaseContracts/ICursoUseCase";
 
 export class CursoController implements ICursoController{
-    private useCase: IUseCase<any, any>;
 
-    constructor(useCase: IUseCase<any, any>) {
-        console.log("CursoController instanciado");
-        this.useCase = useCase;
-      }
+  private createCursoUseCase: ICreateCursoUseCase;
+  private updateCursoUseCase: IUpdateCursoUseCase;
+  private deleteCursoUseCase: IDeleteCursoUseCase;
+  private getCursoUseCase: IGetCursoUseCase;
+  private useCase: IUseCase<any, any>;
+
+  constructor(
+    
+    createCursoUseCase: ICreateCursoUseCase,
+    updateCursoUseCase: IUpdateCursoUseCase,
+    deleteCursoUseCase: IDeleteCursoUseCase,
+    getCursoUseCase: IGetCursoUseCase
+  ) {
+    this.createCursoUseCase = createCursoUseCase;
+    this.updateCursoUseCase = updateCursoUseCase;
+    this.deleteCursoUseCase = deleteCursoUseCase;
+    this.getCursoUseCase = getCursoUseCase;
+    this.useCase = this.useCase;
+  }
+
+   
 
       public async handle(req: Request, resp: Response): Promise<void> {
         try {
