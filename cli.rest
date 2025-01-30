@@ -8,8 +8,8 @@ POST http://localhost:3000/api/cursos/curso
 Content-Type: application/json
 
 {
-  "idCurso": 1,
-  "nome": "Curso de Teste ",
+  "idCurso": 2,
+  "nome": "Curso de Teste 2 ",
   "descricao": "Descrição do curso de teste ",
   "duracao": 8,
   "nivel": "Bacharelado",
@@ -19,7 +19,7 @@ Content-Type: application/json
 ###
 
 # Teste para a rota PUT /api/cursos/curso/:id
-PUT http://localhost:3000/api/cursos/curso/1
+PUT http://localhost:3000/api/cursos/curso/2
 Content-Type: application/json
 
 {
@@ -42,5 +42,3 @@ GET http://localhost:3000/api/cursos/curso/1
 
 ###
 
-# Teste para a rota GET /api/cursos/cursos
-GET http://localhost:3000/api/cursos/cursos

@@ -1,4 +1,4 @@
-import { CursoController } from '../../controllers/cursoController';
+import { CursoController } from 'controllers/cursoController';
 import { ICurso } from '../../contracts/entityContracts/ICurso';
 import { CreateCursoUseCase } from '../../domain/usecases/cursosUseCase/CreateCursoUseCase'
 import { UpdateCursosUseCase } from '../../domain/usecases/cursosUseCase/UpdateCursoUseCase';

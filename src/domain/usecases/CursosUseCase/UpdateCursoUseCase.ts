@@ -9,8 +9,15 @@ export class UpdateCursosUseCase implements IUpdateCursoUseCase {
         this.cursos = cursos;
     }
 
-    async perform({ id, data }: { id: number; data: Partial<ICurso>; }): Promise<ICurso | undefined> {
-        const cursoIndex = this.cursos.findIndex(curso => curso.idCurso === id);
+    async perform({ idCurso, data }: { idCurso: number; data: Partial<ICurso>; }): Promise<ICurso | undefined> {
+
+        console.log(`Enste é o valor de idCurso no momento: ${idCurso}`);
+        
+        const cursoIndex = this.cursos.findIndex(curso => curso.idCurso === idCurso);
+
+        console.log(`Enste é o valor de idCurso no momento: ${idCurso}`);
+
+        console.log(`Enste é o valor de cursoIndex no momento: ${cursoIndex}`);
 
         if (cursoIndex === -1) {
             throw new Error("Curso não encontrado.");

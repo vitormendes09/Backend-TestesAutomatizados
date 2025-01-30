@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
-import { ICursoController } from "../contracts/controllerContracts/ICursoController";
-import { IUseCase } from "../contracts/useCaseContracts/IUseCase";
-import { ICurso } from "../contracts/entityContracts/ICurso";
+import { ICursoController } from "../../src/contracts/controllerContracts/ICursoController";
+import { ICurso } from "../contracts/useCaseContracts/ICursoUseCase";
 import { ICreateCursoUseCase, IDeleteCursoUseCase, IGetCursoUseCase, IUpdateCursoUseCase } from "../contracts/useCaseContracts/ICursoUseCase";
 
 export class CursoController implements ICursoController {
@@ -35,8 +34,11 @@ export class CursoController implements ICursoController {
           resultado = await this.createCursoUseCase.perform(cursoData);
           break;
         case 'PUT':
-          const updateData = { id: Number(req.params.id), data: { nome, descricao, duracao, nivel, coordenador } };
+          const updateData = { idCurso: Number(req.params.id), data: { nome, descricao, duracao, nivel, coordenador } };
           resultado = await this.updateCursoUseCase.perform(updateData);
+          if(updateData.idCurso === -1 ){
+            console.log("Achei o problema")
+          }
           break;
         case 'DELETE':
           resultado = await this.deleteCursoUseCase.perform(Number(req.params.id));
@@ -45,7 +47,7 @@ export class CursoController implements ICursoController {
           if (req.params.id) {
             resultado = await this.getCursoUseCase.perform(Number(req.params.id));
           } else {
-            resultado = await this.getCursoUseCase.getAll();
+            // Retornar todos ?
           }
           break;
         default:
