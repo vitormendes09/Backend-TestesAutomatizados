@@ -135,7 +135,38 @@ describe('CursoController', () => {
         });
     });
 
-    // Adicionar mais testes para PUT, DELETE, GET
+    it('deve chamar handle para atualizar um curso', async () => {
+        const { cursoController, responseFake, updateCursoUseCase } = makeSUT();
+
+        const requestStub = {
+            method: 'PUT',
+            params: { id: '1' },
+            body: {
+                nome: 'Curso de Teste Atualizado',
+                descricao: 'Descrição atualizada do curso de teste',
+                duracao: 5,
+                nivel: 'Bacharelado',
+                coordenador: 'Coordenador Teste Atualizado'
+            }
+        } as any as import('express').Request;
+
+        await cursoController.handle(requestStub, responseFake as any as import('express').Response);
+
+        expect(updateCursoUseCase.chamado).toBe(true);
+        expect(responseFake.statusCodeInformado).toBe(200);
+        expect(responseFake.jsonInformado.mensagem).toBe('Curso processado com sucesso');
+        expect(responseFake.jsonInformado.resultado).toEqual({
+            idCurso: 1,
+            nome: 'Curso de Teste Atualizado',
+            descricao: 'Descrição atualizada do curso de teste',
+            duracao: 5,
+            nivel: 'Bacharelado',
+            coordenador: 'Coordenador Teste Atualizado'
+        });
+    });
+
+
+
 });
 
 
